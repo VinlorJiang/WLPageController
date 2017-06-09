@@ -16,9 +16,10 @@
     CGFloat rgba[4];
     CGFloat rgbaGAP[4];
     BOOL    hasRGBA;
+    BOOL j;
 }
 @end
-
+// gh;jlk
 @implementation WMMenuItem
 
 #pragma mark - Public Methods
