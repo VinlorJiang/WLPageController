@@ -216,9 +216,9 @@ static CGFloat const WMProgressHeight = 2.0;
 - (void)didPressedMenuItem:(WMMenuItem *)menuItem {
     if (self.selItem == menuItem) return;
     NSInteger currentIndex = self.selItem.tag - kTagGap;
-    if ([self.delegate respondsToSelector:@selector(menuView:didSelesctedIndex:currentIndex:)]) {
-        [self.delegate menuView:self didSelesctedIndex:menuItem.tag-kTagGap currentIndex:currentIndex];
-    }
+//    if ([self.delegate respondsToSelector:@selector(menuView:didSelesctedIndex:currentIndex:)]) {
+//        [self.delegate menuView:self didSelesctedIndex:menuItem.tag-kTagGap currentIndex:currentIndex];
+//    }
     
     menuItem.selected = YES;
     self.selItem.selected = NO;

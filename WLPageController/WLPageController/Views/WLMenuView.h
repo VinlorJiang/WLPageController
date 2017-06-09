@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface WLMenuView : UIView
-- (instancetype)initWithFrame:(CGRect)frame labelItems:(NSArray *)items;
+
+@property (nonatomic, strong) NSArray *items;
+
+
+- (instancetype)initWithFrame:(CGRect)frame labelItems:(NSArray *)items backgroundColor:(UIColor *)bgColor norColor:(UIColor *)norColor selColor:(UIColor *)selColor norSize:(CGFloat)norSize selSize:(CGFloat)selSize;
 @end
