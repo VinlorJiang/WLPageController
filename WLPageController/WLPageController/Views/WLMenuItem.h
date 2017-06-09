@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+
+
 @interface WLMenuItem : UILabel
+/** normal color */
+@property (nonatomic, strong) UIColor *normalColor;
+@property (nonatomic, strong) UIColor *selectedColor;
+
 
 @end
