@@ -18,6 +18,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor purpleColor];
+    self.navigationController.title = @"hello";
 }
 
 - (void)didReceiveMemoryWarning {

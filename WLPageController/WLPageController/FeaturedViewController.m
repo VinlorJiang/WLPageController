@@ -7,8 +7,18 @@
 //
 
 #import "FeaturedViewController.h"
+#import "WLPageMenuView.h"
+
+#define kScreenW [UIScreen mainScreen].bounds.size.width
+#define kScreenH [UIScreen mainScreen].bounds.size.height
+
+#define kMenuViewH 60
+
 
 @interface FeaturedViewController ()
+
+@property (nonatomic, strong) WLPageMenuView *menuView;
+
 
 @end
 
@@ -17,22 +27,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.navigationController.title = @"PageMenu_Example";
+    
+    [self.view addSubview:self.menuView];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (WLPageMenuView *)menuView {
+    
+    if (!_menuView) {
+        _menuView = [[WLPageMenuView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, kMenuViewH)];
+        _menuView.titleArray = @[@"直播",@"游戏",@"趣玩",@"新闻"];
+            }
+    
+    return _menuView;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

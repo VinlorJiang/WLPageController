@@ -16,23 +16,29 @@
 
 @implementation AppDelegate
 
+// jr
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     
     FeaturedViewController *feaVC = [[FeaturedViewController alloc] init];
     UINavigationController *feaNav = [[UINavigationController alloc] initWithRootViewController:feaVC];
     feaNav.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFeatured tag:1];
-    feaNav.tabBarItem.title = @"First";
     
     ContactsViewController *conVC = [[ContactsViewController alloc] init];
     UINavigationController *conNav = [[UINavigationController alloc] initWithRootViewController:conVC];
     conNav.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemContacts tag:2];
-    conNav.tabBarItem.title = @"Second";
+    conVC.navigationController.title = @"he";
     
     UITabBarController *tabVC = [[UITabBarController alloc] init];
     [tabVC setViewControllers:[NSMutableArray arrayWithObjects:feaNav, conNav, nil]];
-    tabVC.view.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+    tabVC.view.frame = CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+    
     self.window.rootViewController = tabVC;
+    [self.window makeKeyAndVisible];
+    
+    
     
     return YES;
 }
