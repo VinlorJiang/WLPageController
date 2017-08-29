@@ -13,10 +13,6 @@
 		815E9C121EEA440C0025A1E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815E9C101EEA440C0025A1E8 /* Main.storyboard */; };
 		815E9C141EEA440D0025A1E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815E9C131EEA440D0025A1E8 /* Assets.xcassets */; };
 		815E9C171EEA440D0025A1E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815E9C151EEA440D0025A1E8 /* LaunchScreen.storyboard */; };
-		815E9C241EEA46D90025A1E8 /* WLMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 815E9C231EEA46D90025A1E8 /* WLMenuItem.m */; };
-		815E9C271EEA4E630025A1E8 /* WLMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 815E9C261EEA4E630025A1E8 /* WLMenuView.m */; };
-		815E9C2C1EEA72480025A1E8 /* WMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 815E9C291EEA72480025A1E8 /* WMMenuItem.m */; };
-		815E9C2D1EEA72480025A1E8 /* WMMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 815E9C2B1EEA72480025A1E8 /* WMMenuView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,14 +26,6 @@
 		815E9C131EEA440D0025A1E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		815E9C161EEA440D0025A1E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		815E9C181EEA440D0025A1E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		815E9C221EEA46D90025A1E8 /* WLMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLMenuItem.h; sourceTree = "<group>"; };
-		815E9C231EEA46D90025A1E8 /* WLMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLMenuItem.m; sourceTree = "<group>"; };
-		815E9C251EEA4E630025A1E8 /* WLMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLMenuView.h; sourceTree = "<group>"; };
-		815E9C261EEA4E630025A1E8 /* WLMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLMenuView.m; sourceTree = "<group>"; };
-		815E9C281EEA72480025A1E8 /* WMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuItem.h; sourceTree = "<group>"; };
-		815E9C291EEA72480025A1E8 /* WMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuItem.m; sourceTree = "<group>"; };
-		815E9C2A1EEA72480025A1E8 /* WMMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuView.h; sourceTree = "<group>"; };
-		815E9C2B1EEA72480025A1E8 /* WMMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,14 +83,6 @@
 		815E9C211EEA46D90025A1E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				815E9C281EEA72480025A1E8 /* WMMenuItem.h */,
-				815E9C291EEA72480025A1E8 /* WMMenuItem.m */,
-				815E9C2A1EEA72480025A1E8 /* WMMenuView.h */,
-				815E9C2B1EEA72480025A1E8 /* WMMenuView.m */,
-				815E9C221EEA46D90025A1E8 /* WLMenuItem.h */,
-				815E9C231EEA46D90025A1E8 /* WLMenuItem.m */,
-				815E9C251EEA4E630025A1E8 /* WLMenuView.h */,
-				815E9C261EEA4E630025A1E8 /* WLMenuView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,13 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				815E9C271EEA4E630025A1E8 /* WLMenuView.m in Sources */,
-				815E9C241EEA46D90025A1E8 /* WLMenuItem.m in Sources */,
 				815E9C0F1EEA440C0025A1E8 /* ViewController.m in Sources */,
 				815E9C0C1EEA440C0025A1E8 /* AppDelegate.m in Sources */,
-				815E9C2D1EEA72480025A1E8 /* WMMenuView.m in Sources */,
 				815E9C091EEA440C0025A1E8 /* main.m in Sources */,
-				815E9C2C1EEA72480025A1E8 /* WMMenuItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
