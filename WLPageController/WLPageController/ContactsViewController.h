@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  ContactsViewController.h
 //  WLPageController
 //
-//  Created by dinpay on 2017/6/9.
+//  Created by dinpay on 2017/8/29.
 //  Copyright © 2017年 com.vinlor. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ContactsViewController : UIViewController
 
 @end
-
