@@ -12,7 +12,7 @@
 #define kScreenW [UIScreen mainScreen].bounds.size.width
 #define kScreenH [UIScreen mainScreen].bounds.size.height
 
-#define kMenuViewH 60
+#define kMenuViewH 44
 
 
 @interface FeaturedViewController ()
@@ -28,7 +28,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor lightGrayColor];
-    self.navigationController.title = @"PageMenu_Example";
+    self.title = @"PageMenu_Example";
     
     [self.view addSubview:self.menuView];
 
@@ -38,7 +38,7 @@
 - (WLPageMenuView *)menuView {
     
     if (!_menuView) {
-        _menuView = [[WLPageMenuView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, kMenuViewH)];
+        _menuView = [[WLPageMenuView alloc] initWithFrame:CGRectMake(0, 64, kScreenW, kMenuViewH)];
         _menuView.titleArray = @[@"直播",@"游戏",@"趣玩",@"新闻"];
             }
     

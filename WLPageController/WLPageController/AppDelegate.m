@@ -33,10 +33,13 @@
     
     UITabBarController *tabVC = [[UITabBarController alloc] init];
     [tabVC setViewControllers:[NSMutableArray arrayWithObjects:feaNav, conNav, nil]];
-    tabVC.view.frame = CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+
     
     self.window.rootViewController = tabVC;
     [self.window makeKeyAndVisible];
+    
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor orangeColor]];
     
     
     
