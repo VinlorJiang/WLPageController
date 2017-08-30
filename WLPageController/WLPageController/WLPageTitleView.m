@@ -17,10 +17,12 @@
     UIScrollView *_scrollView;
     UIView *_bottomLine;
     UIView *_scrollLine;
-    NSInteger _index;// 当前label点击的位置
+    int _index;// 当前label点击的位置
     NSMutableArray <UILabel *> *_labelArray;
     
-    NSArray *_normalColorArray;
+//    UIColor *_normalColorArray;
+//    UIColor *_selectColorArray;
+    NSArray  *_normalColorArray;
     NSArray *_selectColorArray;
 }
 
@@ -41,11 +43,11 @@
         _labelArray = [NSMutableArray array];
         self.titleArray = titleArray;
         
-#define kNormalColor (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
-#define kSelectColor (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
-        
         _normalColorArray = @[@85, @85, @85];
         _selectColorArray = @[@255, @128, @0];
+        
+//        _normalColorArray = [UIColor colorWithRed:85/255.0 green:85/255.0 blue:85/255.0 alpha:1.0];
+//        _selectColorArray = [UIColor colorWithRed:255.0/255.0 green:128/255.0 blue:0/255.0 alpha:1.0];
         [self createScrollView];
     }
     
@@ -88,10 +90,6 @@
         label.textAlignment = NSTextAlignmentCenter;
         label.userInteractionEnabled = YES;
         
-//        if (i == 0) {
-//            label.textColor = [UIColor colorWithRed:255/255.0 green:128/255.0 blue:0/255.0 alpha:1.0];
-//        }
-        
         UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
         [label addGestureRecognizer:gesture];
     }
@@ -103,7 +101,7 @@
     _bottomLine.backgroundColor = [UIColor lightGrayColor];
     
     UILabel *firstLabel = _labelArray[0];
-    firstLabel.textColor = [UIColor colorWithRed:[_selectColorArray[0] integerValue]/255.0 green:[_selectColorArray[1] integerValue]/255.0 blue:[_selectColorArray[2] integerValue]/255.0 alpha:1.0];
+    firstLabel.textColor = [UIColor colorWithRed:255/255.0 green:128/255.0 blue:0/255.0 alpha:1.0];
     
     _scrollLine = [[UIView alloc] initWithFrame:CGRectMake(firstLabel.frame.origin.x, -22, firstLabel.frame.size.width, 2)];
     _scrollLine.backgroundColor = [UIColor orangeColor];
@@ -124,7 +122,7 @@
     currentLabel.textColor = [UIColor colorWithRed:255/255.0 green:128/255.0 blue:0/255.0 alpha:1.0];
     oldLabel.textColor = [UIColor colorWithRed:85/255.0 green:85/255.0 blue:85/255.0 alpha:1.0];
     
-    _index = currentLabel.tag;
+    _index = (int)currentLabel.tag;
     
     CGFloat labelX = _index * _scrollLine.frame.size.width;
     
@@ -133,10 +131,36 @@
         temp.origin.x = labelX;
         _scrollLine.frame = temp;
     }];
-}
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    CGFloat h = scrollView.contentOffset.y;
     
-    NSLog(@"%lf",h);
+    if ([self.delegate respondsToSelector:@selector(pageTitleView:selectedIndex:)]) {
+        [self.delegate pageTitleView:self selectedIndex:_index];
+    }
+}
+#pragma mark - public methods
+- (void)titleWithProgress:(CGFloat)progress sourceIndex:(int)sourceIndex targetIndex:(int)targetIndex {
+    
+    UILabel *sourceLabel = _labelArray[sourceIndex];
+    UILabel *targetLabel = _labelArray[targetIndex];
+    
+    CGFloat moveTotalX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x;
+    CGFloat moveX = moveTotalX * progress;
+    CGRect temp = _scrollLine.frame;
+    temp.origin.x = sourceLabel.frame.origin.x + moveX;
+    _scrollLine.frame = temp;
+    
+//    _normalColorArray = @[@85, @85, @85];
+//    _selectColorArray = @[@255, @128, @0];
+    
+    CGFloat colorDeltaR = [_selectColorArray[0] integerValue] - [_normalColorArray[0] integerValue];
+    CGFloat colorDeltaG = [_selectColorArray[1] integerValue] - [_normalColorArray[1] integerValue];
+    CGFloat colorDeltaB = [_selectColorArray[2] integerValue] - [_normalColorArray[2] integerValue];
+    
+    sourceLabel.textColor = [UIColor colorWithRed:([_selectColorArray[0] floatValue] - colorDeltaR * progress)/255.0 green:([_selectColorArray[1] floatValue] - colorDeltaG * progress)/255.0 blue:([_selectColorArray[2] floatValue] - colorDeltaB * progress)/255.0 alpha:1.0];
+    
+    targetLabel.textColor = [UIColor colorWithRed:([_normalColorArray[0] floatValue] + colorDeltaR * progress)/255.0 green:([_normalColorArray[1] floatValue] + colorDeltaG * progress)/255.0 blue:([_normalColorArray[2] floatValue] + colorDeltaB * progress)/255.0 alpha:1.0];
+//    sourceLabel.textColor = [UIColor redColor];
+//    targetLabel.textColor = _selectColorArray;
+//    
+    _index = targetIndex;
 }
 @end
