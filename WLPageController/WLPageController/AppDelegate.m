@@ -39,7 +39,7 @@
     [self.window makeKeyAndVisible];
     
     
-    [[UINavigationBar appearance] setBarTintColor:[UIColor orangeColor]];
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor orangeColor]];
     
     
     

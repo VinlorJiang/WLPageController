@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		185330051F55AC9B001C2BED /* WLPageMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185330041F55AC9B001C2BED /* WLPageMenuView.m */; };
+		810E51B21F5642E80046408E /* WLPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 810E51B11F5642E80046408E /* WLPageTitleView.m */; };
 		815E9C091EEA440C0025A1E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 815E9C081EEA440C0025A1E8 /* main.m */; };
 		815E9C0C1EEA440C0025A1E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 815E9C0B1EEA440C0025A1E8 /* AppDelegate.m */; };
 		815E9C121EEA440C0025A1E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815E9C101EEA440C0025A1E8 /* Main.storyboard */; };
@@ -18,8 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		185330031F55AC9B001C2BED /* WLPageMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLPageMenuView.h; sourceTree = "<group>"; };
-		185330041F55AC9B001C2BED /* WLPageMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLPageMenuView.m; sourceTree = "<group>"; };
+		810E51B01F5642E80046408E /* WLPageTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLPageTitleView.h; sourceTree = "<group>"; };
+		810E51B11F5642E80046408E /* WLPageTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLPageTitleView.m; sourceTree = "<group>"; };
 		815E9C041EEA440C0025A1E8 /* WLPageController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WLPageController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		815E9C081EEA440C0025A1E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		815E9C0A1EEA440C0025A1E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,8 +69,8 @@
 				815E9C0B1EEA440C0025A1E8 /* AppDelegate.m */,
 				8168347D1F5577E100E8BE3C /* FeaturedViewController.h */,
 				8168347E1F5577E100E8BE3C /* FeaturedViewController.m */,
-				185330031F55AC9B001C2BED /* WLPageMenuView.h */,
-				185330041F55AC9B001C2BED /* WLPageMenuView.m */,
+				810E51B01F5642E80046408E /* WLPageTitleView.h */,
+				810E51B11F5642E80046408E /* WLPageTitleView.m */,
 				816834801F5577F100E8BE3C /* ContactsViewController.h */,
 				816834811F5577F100E8BE3C /* ContactsViewController.m */,
 				815E9C101EEA440C0025A1E8 /* Main.storyboard */,
@@ -170,7 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8168347F1F5577E100E8BE3C /* FeaturedViewController.m in Sources */,
-				185330051F55AC9B001C2BED /* WLPageMenuView.m in Sources */,
+				810E51B21F5642E80046408E /* WLPageTitleView.m in Sources */,
 				816834821F5577F100E8BE3C /* ContactsViewController.m in Sources */,
 				815E9C0C1EEA440C0025A1E8 /* AppDelegate.m in Sources */,
 				815E9C091EEA440C0025A1E8 /* main.m in Sources */,

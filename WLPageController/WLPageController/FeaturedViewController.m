@@ -7,17 +7,17 @@
 //
 
 #import "FeaturedViewController.h"
-#import "WLPageMenuView.h"
+#import "WLPageTitleView.h"
 
 #define kScreenW [UIScreen mainScreen].bounds.size.width
 #define kScreenH [UIScreen mainScreen].bounds.size.height
 
-#define kMenuViewH 44
+#define kTitleViewH 44
 
 
 @interface FeaturedViewController ()
 
-@property (nonatomic, strong) WLPageMenuView *menuView;
+@property (nonatomic, strong) WLPageTitleView *titleView;
 
 
 @end
@@ -30,18 +30,20 @@
     self.view.backgroundColor = [UIColor lightGrayColor];
     self.title = @"PageMenu_Example";
     
-    [self.view addSubview:self.menuView];
+    [self.view addSubview:self.titleView];
 
 }
 
 
-- (WLPageMenuView *)menuView {
+- (WLPageTitleView *)titleView {
     
-    if (!_menuView) {
-        _menuView = [[WLPageMenuView alloc] initWithFrame:CGRectMake(0, 64, kScreenW, kMenuViewH)];
-        _menuView.titleArray = @[@"直播",@"游戏",@"趣玩",@"新闻"];
-            }
+    if (!_titleView) {
+        NSArray *titleArray = @[@"推荐", @"游戏",@"趣玩",@"娱乐"];
+        
+        _titleView = [[WLPageTitleView alloc] initWithFrame:CGRectMake(0, 64, kScreenW, kTitleViewH) titleArray:titleArray];
+        
+    }
     
-    return _menuView;
+    return _titleView;
 }
 @end
